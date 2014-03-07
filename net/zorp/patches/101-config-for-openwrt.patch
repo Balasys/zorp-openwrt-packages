@@ -1,0 +1,24 @@
+--- a/zorpctl/instances.conf.http.sample
++++ b/zorpctl/instances.conf.http.sample
+@@ -9,4 +9,4 @@
+ # The instance name and arguments _must_ be separated by spaces instead
+ # of tabs! Otherwise zorpctl will stop working.
+
+-#zorp_http --verbose=5 --policy /etc/zorp/policy.py
++#zorp_http --no-caps --user root --group root --verbose=5 --policy /etc/zorp/policy.py
+--- a/zorpctl/instances.conf.https.sample
++++ b/zorpctl/instances.conf.https.sample
+@@ -9,4 +9,4 @@
+ # The instance name and arguments _must_ be separated by spaces instead
+ # of tabs! Otherwise zorpctl will stop working.
+
+-#zorp_https --verbose=3 --policy /etc/zorp/policy.py
++#zorp_https --no-caps --user root --group root --verbose=3 --policy /etc/zorp/policy.py
+--- a/zorpctl/instances.conf.ssh.sample
++++ b/zorpctl/instances.conf.ssh.sample
+@@ -9,4 +9,4 @@
+ # The instance name and arguments _must_ be separated by spaces instead
+ # of tabs! Otherwise zorpctl will stop working.
+
+-#zorp_ssh --verbose=3 --policy /etc/zorp/policy.py
++#zorp_ssh --no-caps --user root --group root --verbose=3 --policy /etc/zorp/policy.py
