@@ -15,7 +15,7 @@ PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://pypi.python.org/packages/source/p/python-daemon/
 PKG_MD5SUM:=1f6cd41473c2e201021a0aeef395b2b1
 
-PKG_BUILD_DEPENDS:=distribute/host
+PKG_BUILD_DEPENDS:=python python-setuptools
 
 PKG_LICENSE:=PSF-2+
 
@@ -23,12 +23,12 @@ include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)
 
 define Package/python-daemon
-	SECTION:=lang-python
-	CATEGORY:=Languages
-	SUBMENU:=Python
-	TITLE:=python-daemon
-	URL:=https://pypi.python.org/pypi/python-daemon/
-	DEPENDS:=+python +lockfile
+  SUBMENU:=Python
+  SECTION:=lang-python
+  CATEGORY:=Languages
+  TITLE:=python-daemon
+  URL:=https://pypi.python.org/pypi/python-daemon/
+  DEPENDS:=+python +lockfile
 endef
 
 define Package/python-daemon/description
@@ -40,7 +40,7 @@ define Build/Compile
 endef
 
 define Package/python-daemon/install
-	$(INSTALL_DIR) $(1)$(PYTHON_PKG_DIR)/
+	$(INSTALL_DIR) $(1)$(PYTHON_PKG_DIR)
 	$(CP) \
 		$(PKG_INSTALL_DIR)$(PYTHON_PKG_DIR)/* \
 		$(1)$(PYTHON_PKG_DIR)/
